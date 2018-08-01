@@ -4,9 +4,12 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+const logger = require('./utils/MyLogger')
+
 let mainWindow;
 
 function createWindow() {
+  logger.info('Hello again distributed logs');
   mainWindow = new BrowserWindow({width: 800, height: 600 })
 
   mainWindow.loadURL(
@@ -36,3 +39,8 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+// react Hack
+// const electron = window.require('electron');
+// const fs = electron.remote.require('fs');
+// const ipcRenderer  = electron.ipcRenderer;
