@@ -1,2 +1,12 @@
 2018-08-01T16:17:49+01:00 [Kryptonite!] info: Hello again distributed logs
 2018-08-01T18:24:13+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-01T19:03:30+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-03T15:30:43+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-04T15:46:17+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-04T16:13:03+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-04T19:42:10+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-04T19:53:48+01:00 [Kryptonite!] info: react-log:[object Object]
+2018-08-04T19:58:23+01:00 [Kryptonite!] info: react-log:[object Object]
+2018-08-04T20:00:45+01:00 [Kryptonite!] info: Hello again distributed logs
+2018-08-04T20:01:15+01:00 [Kryptonite!] info: react-log:{"accounts":[],"balances":{},"enckeys":{},"metadata":{"createDate":"","ver":""},"tokens":[]}
+2018-08-04T20:03:15+01:00 [Kryptonite!] info: react-log:{"accounts":[],"balances":{},"enckeys":{},"metadata":{"createDate":"","ver":""},"tokens":[]}

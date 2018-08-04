@@ -7,16 +7,23 @@
   "private": true,
   "dependencies": {
     "antd": "^3.7.3",
+    "bip39": "^2.5.0",
     "electron": "2.0.4",
     "eslint": "5.0.1",
     "eslint-config-airbnb": "17.0.0",
     "eslint-plugin-import": "2.13.0",
     "eslint-plugin-jsx-a11y": "6.1.0",
     "eslint-plugin-react": "7.10.0",
+    "ethereumjs-util": "^5.2.0",
+    "hdkey": "^1.0.0",
     "moment-timezone": "0.5.21",
     "react": "16.4.1",
     "react-dom": "16.4.1",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "web3": "^1.0.0-beta.35",
     "winston": "3.0.0"
   },
   "homepage": "./",
@@ -44,6 +51,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.8.0",
+    "debug": "^3.1.0",
     "electron-builder": "^20.19.1",
     "react-app-rewired": "^1.5.2"
   }

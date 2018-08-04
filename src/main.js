@@ -1,6 +1,6 @@
 const electron = require('electron')
 const app = electron.app
-const BrowserWindow = electron.BrowserWindow
+const {BrowserWindow,ipcMain} = electron
 const path = require('path')
 const url = require('url')
 
@@ -39,6 +39,11 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+ipcMain.on('react:log', (e,item)=>{
+  const obj = JSON.stringify(item)
+  logger.info(`react-log:${obj}`)} );
+
 
 // react Hack
 // const electron = window.require('electron');
