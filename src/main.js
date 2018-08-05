@@ -1,15 +1,17 @@
 const electron = require('electron')
 const app = electron.app
-const {BrowserWindow,ipcMain} = electron
+const {BrowserWindow,ipcMain, Menu} = electron
 const path = require('path')
 const url = require('url')
 
 const logger = require('./utils/MyLogger')
+const {menuTemplateProvider} = require('./electronUtils/myMenu');
 
-let mainWindow;
+let mainWindow,mainMenu;
+
 
 function createWindow() {
-  logger.info('Hello again distributed logs');
+  
   mainWindow = new BrowserWindow({width: 800, height: 600 })
 
   mainWindow.loadURL(
@@ -20,6 +22,9 @@ function createWindow() {
         slashes: true
       })
   )
+  const {menuTemplate} = menuTemplateProvider(app)
+  mainMenu =  Menu.buildFromTemplate(menuTemplate)
+  Menu.setApplicationMenu(mainMenu)
 
   mainWindow.on('closed', () => {
     mainWindow = null
@@ -35,10 +40,10 @@ app.on('window-all-closed', () => {
 })
 
 app.on('activate', () => {
-  if (mainWindow === null) {
-    createWindow()
-  }
+  if (mainWindow === null) { createWindow()  }
 })
+
+
 
 ipcMain.on('react:log', (e,item)=>{
   const obj = JSON.stringify(item)
