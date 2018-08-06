@@ -13,6 +13,7 @@ import {Provider} from 'react-redux'
 import reducer from './reducer'
 
 import registerServiceWorker from './registerServiceWorker';
+import AppRouter from './AppRouter';
 
 const electron = window.require('electron');
 const fs = electron.remote.require('fs');
@@ -24,10 +25,13 @@ const ipcRenderer  = electron.ipcRenderer;
 
 
 const store = createStore(reducer)
-ipcRenderer.send('react:log', store.getState());
-logger.info("Johnnys")
-//logger.info(store.getState()) 
-//console.log(store.getState()) 
+//ipcRenderer.send('react:log', store.getState());
+ 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const jsx = 
+(<Provider store= {store} >
+    <AppRouter/>
+</Provider>)
+
+ReactDOM.render(jsx, document.getElementById('root'));
 registerServiceWorker();

@@ -26,6 +26,14 @@ function createWindow() {
   mainMenu =  Menu.buildFromTemplate(menuTemplate)
   Menu.setApplicationMenu(mainMenu)
 
+   // Don't show until we are ready and loaded
+   mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+    // Open the DevTools automatically if developing
+   
+  })
+    
+
   mainWindow.on('closed', () => {
     mainWindow = null
   })
@@ -46,11 +54,13 @@ app.on('activate', () => {
 
 
 ipcMain.on('react:log', (e,item)=>{
-  const obj = JSON.stringify(item)
-  logger.info(`react-log:${obj}`)} );
+    let obj = typeof(item) === 'object' ? JSON.stringify(item) : item
+  logger.info(`react-log:${obj}`) 
+} );
 
 
 // react Hack
 // const electron = window.require('electron');
 // const fs = electron.remote.require('fs');
 // const ipcRenderer  = electron.ipcRenderer;
+//mainWindow.webContents.openDevTools()

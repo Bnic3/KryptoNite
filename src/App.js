@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Row, Col, Layout, Card, Input, Button } from 'antd';
+const {  Content } = Layout;
+
 class App extends Component {
   render() {
     return (

@@ -26,3 +26,40 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.content-backdrop {
+  /* background-color: #BBDEFB */
+}
+
+.red{  background-color: rgb(223, 52, 52);}
+  .black{  background-color: black;}
+
+
+
+  .ant-layout-content{
+    color:rgb(32, 81, 91);
+    background-color: #F4FAFA;
+    height: 100vh;
+    width: 100vw;
+    
+  }
+
+  .home-page{
+    height: 100vh;
+    width: 100vw;
+   
+  } 
+  .home-page_form{
+    padding: 2px 2px 2px 2px; 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    
+  }
+
+  .home-page_form .ant-btn {
+    width: 100%;
+    
+    
+  }
