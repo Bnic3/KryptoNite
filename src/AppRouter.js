@@ -22,9 +22,7 @@ const AppRouter  = () => {
         else {bool = true;
         //Todo: load to store
         }
-        
-        ReactLogger(ks)
-        ReactLogger(bool)
+       
         return bool
     }
     return (
@@ -48,22 +46,7 @@ const AppRouter  = () => {
     ) 
 }
 
-// const Home = () =>(
-//     <div >
-    
-//     <Row type= 'flex' justify='center' align="middle" className=' home-page'>
-//         <Col span={8} >
-//             <div className='home-page_form '  >
-//                 <Input size="large" placeholder="password" type="password" />
-//                 <Button type="primary"   block= "true" >Create Wallet</Button>
-                
-//             </div>
-                      
-//         </Col>
-//     </Row>
-     
-//     </div>
-// )
+
 
 const Login = () =>(
     <div className="login-panel content-backdrop ">

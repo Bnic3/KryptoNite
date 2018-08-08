@@ -7,24 +7,24 @@ import logger from './utils/ReactLogger'
 import App from './App';
 
 
-
-import {createStore} from 'redux';
+import thunk from "redux-thunk";
+import {createStore, compose, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux'
+import registerServiceWorker from './registerServiceWorker';
 import reducer from './reducer'
 
-import registerServiceWorker from './registerServiceWorker';
+
 import AppRouter from './AppRouter';
 
-const electron = window.require('electron');
-const fs = electron.remote.require('fs');
-const ipcRenderer  = electron.ipcRenderer;
+//const electron = window.require('electron');
+//const fs = electron.remote.require('fs');
+//const ipcRenderer  = electron.ipcRenderer;
 
 
 
-
-
-
-const store = createStore(reducer)
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, 
+    composeEnhancers(applyMiddleware(thunk)))
 //ipcRenderer.send('react:log', store.getState());
  
 
