@@ -13,6 +13,7 @@ const {  Content } = Layout;
 
 
 const AppRouter  = () => {
+
     const walletExist= ()=>{
         let bool 
         //Todo: check if wallet exist then load to redux store and navigate to password page
@@ -26,22 +27,22 @@ const AppRouter  = () => {
         return bool
     }
     return (
-        <div><Layout>
-        <Content>
+        <div ><Layout> <Content>
         
         <Router>
-        <Switch>           
-            
-            <Route exact path = "/" render={()=>{
-                return  walletExist() ? (<Redirect to= '/login' />) : (<Home/>)
-            }} />        
+        <Switch> 
+                  
+         <Route exact path = "/" render={(props)=>{
+            return  walletExist() ? (<Redirect to= '/login' />) : (<Home {...props}/>)
+         }} />
+       
             <Route path = "/dashboard" component={Dashboard} />        
             <Route path = "/login" component={Login} />        
                     
         </Switch>   
         </Router>
-        </Content>
-        </Layout>
+        
+        </Content></Layout>
         </div>  
     ) 
 }

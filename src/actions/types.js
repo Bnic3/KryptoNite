@@ -1,0 +1,1 @@
+export const UPDATE_ACCOUNTS = 'update_accounts'

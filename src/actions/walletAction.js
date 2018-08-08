@@ -4,6 +4,7 @@ import { PASSWORDKEY } from './constants';
 
 //import {generateMnemonic} from './utils/ethFunctions'
 import { generateMnemonic, generateSeed, generateHDKeyFromSeed, genKeys } from './../utils/ethFunctions';
+import { UPDATE_ACCOUNTS } from './types';
 
 
 
@@ -12,22 +13,32 @@ import { generateMnemonic, generateSeed, generateHDKeyFromSeed, genKeys } from '
 
 export  function createWallet(password){
     return async (dispatch)=>{
-        ReactLogger("i am in createWallet")
+        ReactLogger("i am in createWallest")
         const {accounts, mnemonic} = await createCoinbaseAccounts()
-        ReactLogger(accounts)        
-        savepass(password)
-        ReactLogger(typeof(mnemonic))
+        dispatch(updateAccounts(accounts)); //dispatch to reducer              
+        savepass(password)        
         return mnemonic;
     }
 } 
 
+
+function updateAccounts(accounts=[]){
+    return {type: UPDATE_ACCOUNTS,accounts}
+}
+
+
+
+
+
+
+
+
+
+
 function savepass(pwd){   
     const hash = crypto.createHash('sha256').update(pwd).digest('base64');
-    //localStorage.setItem(PASSWORDKEY,hash)
-    ReactLogger(hash)
-    
-
-} 
+    localStorage.setItem(PASSWORDKEY,hash)
+ } 
 
 function createCoinbaseAccounts(){
     return new Promise((resolve,reject)=>{

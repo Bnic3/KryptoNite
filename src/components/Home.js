@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from "prop-types";
 
 import {connect}  from "react-redux";
 
@@ -8,18 +8,30 @@ import { createWallet } from './../actions/walletAction';
 import ReactLogger from '../utils/ReactLogger';
 
 class Home extends Component {
-    state = { loading: false, disable: false, showModal: false,
-    password:"", mnemonic:'' }
+    constructor(props) {
+        super(props);
+        this.state = { loading: false, disable: false, showModal: false,
+            password:"", mnemonic:'' }
+            ReactLogger(props)
+    }
+
+    
+     
 
     enterloading = () =>{
-        this.setState({loading:true, disable:true})
-        this.processWallet();
-        this.setState({ showModal: true });
+        this.props.history.push('/dashboard')
+    //     this.setState({loading:true, disable:true})
+    //     this.processWallet();
+    //    setTimeout(()=>{
+    //     this.setState({ showModal: true });
+    //    }, 1500)
         //Todo: save create Wallet show mnemonic and navigate to dashboard 
     }
 
-    handleCancel = (e) => {        
+    handleOK = (e) => {        
         this.setState({ showModal: false });
+        
+        ReactLogger(this.props.createWallet)
       }
     inputOnChange=(e)=>{
     this.setState({password:e.target.value})
@@ -28,8 +40,7 @@ class Home extends Component {
     processWallet= async ()=>{
         //Todo: write complex validation code here
         if (this.state.password !== ""){
-              const mnemonic= await this.props.createWallet(this.state.password);
-              ReactLogger(mnemonic)
+              const mnemonic = await this.props.createWallet(this.state.password);              
               this.setState({mnemonic})
             }
     }  
@@ -50,10 +61,10 @@ class Home extends Component {
                     <Modal
                     title= "Mnemonics"
                     visible={showModal}
-                    onOk={this.handleCancel} onCancel={this.handleCancel} >
+                    onOk={this.handleOK} onCancel={this.handleOK} >
 
-                    //<h2>{this.state.mnemonic}</h2>                    
-                    <p>Ensure you write down these words as is. This can be used to recover your password</p>
+                    <h2>"{this.state.mnemonic}"</h2>                    
+                    <p>Ensure you write down these wordson paper without the quotes. This can be used to recover your password</p>
                     </Modal>
                               
                 </Col>
@@ -63,6 +74,9 @@ class Home extends Component {
     }
 }
  
+Home.propTypes= {
+    createWallet:PropTypes.func.isRequired
+}
 export default connect(undefined,{createWallet})(Home);
 
 

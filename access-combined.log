@@ -17,3 +17,22 @@
 2018-08-08T11:56:36+01:00 [Kryptonite!] info: react-log:[{"address":"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6"},{"address":"0x297FB66931ABE8E4269Fd5452CE784165D981E4B","index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7"},{"address":"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB","index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb"}]
 2018-08-08T11:56:36+01:00 [Kryptonite!] info: react-log:ltljLzY1ZMwwMlIUCc8iqFLyAy7sCZ7VlnwNAAzsYHo=
 2018-08-08T11:56:36+01:00 [Kryptonite!] info: react-log:string
+2018-08-08T11:58:34+01:00 [Kryptonite!] info: react-log:i am in createWallet
+2018-08-08T11:58:34+01:00 [Kryptonite!] info: react-log:[{"address":"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6"},{"address":"0x297FB66931ABE8E4269Fd5452CE784165D981E4B","index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7"},{"address":"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB","index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb"}]
+2018-08-08T11:58:34+01:00 [Kryptonite!] info: react-log:ltljLzY1ZMwwMlIUCc8iqFLyAy7sCZ7VlnwNAAzsYHo=
+2018-08-08T11:58:34+01:00 [Kryptonite!] info: react-log:string
+2018-08-08T11:58:34+01:00 [Kryptonite!] info: react-log:future video sound off bounce cost abandon hungry job trophy upper vivid
+2018-08-08T13:10:42+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T13:12:25+01:00 [Kryptonite!] info: react-log:i am in createWallet
+2018-08-08T13:12:37+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T13:13:43+01:00 [Kryptonite!] info: react-log:i am in createWallet
+2018-08-08T13:14:06+01:00 [Kryptonite!] info: react-log:null
+2018-08-08T13:26:19+01:00 [Kryptonite!] info: react-log:i am in createWallet
+2018-08-08T13:49:55+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T14:01:32+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T14:08:07+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T14:45:49+01:00 [Kryptonite!] info: Added Extension:  React Developer Tools
+2018-08-08T14:45:56+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T15:08:44+01:00 [Kryptonite!] info: react-log:{}
+2018-08-08T15:13:51+01:00 [Kryptonite!] info: react-log:{"history":{"action":"POP","length":10,"location":{"hash":"","pathname":"/","search":""}},"location":{"hash":"","pathname":"/","search":""},"match":{"isExact":true,"params":{},"path":"/","url":"/"}}
+2018-08-08T15:17:25+01:00 [Kryptonite!] info: react-log:{"history":{"action":"POP","length":11,"location":{"hash":"","pathname":"/","search":""}},"location":{"hash":"","pathname":"/","search":""},"match":{"isExact":true,"params":{},"path":"/","url":"/"}}

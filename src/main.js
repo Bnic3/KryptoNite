@@ -6,6 +6,7 @@ const url = require('url')
 
 const logger = require('./utils/MyLogger')
 const {menuTemplateProvider} = require('./electronUtils/myMenu');
+const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
 
 let mainWindow,mainMenu;
 
@@ -37,6 +38,14 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  installExtension(REACT_DEVELOPER_TOOLS).then((name) => {
+    logger.info(`Added Extension:  ${name}`);
+})
+.catch((err) => {
+   logger.info('An error occurred: ', err);
+});
+  
 }
 
 app.on('ready', createWindow)

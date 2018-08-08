@@ -55,6 +55,8 @@
     "babel-plugin-import": "^1.8.0",
     "debug": "^3.1.0",
     "electron-builder": "^20.19.1",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-react-devtools": "^0.5.3",
     "react-app-rewired": "^1.5.2"
   }
 }
