@@ -36,3 +36,6 @@
 2018-08-08T15:08:44+01:00 [Kryptonite!] info: react-log:{}
 2018-08-08T15:13:51+01:00 [Kryptonite!] info: react-log:{"history":{"action":"POP","length":10,"location":{"hash":"","pathname":"/","search":""}},"location":{"hash":"","pathname":"/","search":""},"match":{"isExact":true,"params":{},"path":"/","url":"/"}}
 2018-08-08T15:17:25+01:00 [Kryptonite!] info: react-log:{"history":{"action":"POP","length":11,"location":{"hash":"","pathname":"/","search":""}},"location":{"hash":"","pathname":"/","search":""},"match":{"isExact":true,"params":{},"path":"/","url":"/"}}
+2018-08-11T13:36:15+01:00 [Kryptonite!] info: Added Extension:  React Developer Tools
+2018-08-11T13:36:41+01:00 [Kryptonite!] info: react-log:{"history":{"action":"POP","length":1,"location":{"hash":"","pathname":"/","search":""}},"location":{"hash":"","pathname":"/","search":""},"match":{"isExact":true,"params":{},"path":"/","url":"/"}}
+2018-08-11T13:36:46+01:00 [Kryptonite!] info: react-log:i am in createWallest

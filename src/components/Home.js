@@ -19,12 +19,13 @@ class Home extends Component {
      
 
     enterloading = () =>{
+        
+        this.setState({loading:true, disable:true})
+        this.processWallet();
+       setTimeout(()=>{
+        this.setState({ showModal: true });
         this.props.history.push('/dashboard')
-    //     this.setState({loading:true, disable:true})
-    //     this.processWallet();
-    //    setTimeout(()=>{
-    //     this.setState({ showModal: true });
-    //    }, 1500)
+       }, 1500)
         //Todo: save create Wallet show mnemonic and navigate to dashboard 
     }
 

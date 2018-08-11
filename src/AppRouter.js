@@ -6,8 +6,9 @@ import ReactLogger from './utils/ReactLogger'
 
 import './App.css';
 
-import { Row, Col, Layout, Card, Input, Button } from 'antd';
+import { Row, Col, Layout, Card } from 'antd';
 import Home from './components/Home';
+import Dashboard from './components/Dashboard';
 
 const {  Content } = Layout;
 
@@ -55,11 +56,11 @@ const Login = () =>(
     </div>
 )
 
-const Dashboard = () =>(
-    <div>
-    <h2>About</h2>
-    </div>
-)
+// const Dashboard = () =>(
+//     <div>
+//     <h2>About</h2>
+//     </div>
+// )
 // <Route exact path="/" render={()=>{
 //     this.walletExist() ? (<Redirect to= '/login' />) : (<Home/>)
 // }}/>
