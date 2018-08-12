@@ -12,7 +12,7 @@ class Home extends Component {
         super(props);
         this.state = { loading: false, disable: false, showModal: false,
             password:"", mnemonic:'' }
-            ReactLogger(props)
+            //ReactLogger(props)
     }
 
     

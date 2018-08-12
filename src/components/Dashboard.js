@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import { Layout, Input, Button, Menu, Icon } from 'antd';
 
+import { BrowserRouter as Router, Route, Switch,Redirect} from 'react-router-dom';
+
+import {Link} from 'react-router-dom';
+import Home from './Home';
+
+import logo from "../img/coin.png"
+import online from "../img/online.png"
+import ReactLogger from '../utils/ReactLogger';
+
 const { Header, Sider, Content } = Layout;
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.state = { collapsed:false }
+        this.state = { collapsed:false, current:null }
     }
 
     toggle = () => {
@@ -15,24 +24,43 @@ class Dashboard extends Component {
         });
       }
 
-      
+    handleMenuClick = (e) => {
+        ReactLogger(this.props.match)
+        this.setState({
+          current: e.key,
+        });
+      }
+      playing =(e)=>{
+          ReactLogger("click wanna play again")
+          ReactLogger(e.key)
+          const url = this.props.match.url;
+
+          this.props.history.push(`${url}/${e.key}`)
+          
+      }
+
     render() { 
+        const {match} = this.props;
         return ( 
             <Layout>
                 <Sider
                     trigger={null}
                     collapsible
-                    collapsed={this.state.collapsed} >
+                    collapsed={this.state.collapsed} 
+                    >
 
-                    <div className="logo" />
+                    <div className="logo" >
+                    <img src={logo}/> <h3>KryptoNite</h3>
+                    </div>
+
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} >
-                      <Menu.Item key="1">
-                        <Icon type="user" />
-                        <span>nav 1</span>
+                      <Menu.Item key="wallet" onClick={this.playing} >
+                        <Icon type="pie-chart" />
+                        <span>Wallets</span>
                       </Menu.Item>
-                      <Menu.Item key="2">
-                        <Icon type="video-camera" />
-                        <span>nav 2</span>
+                      <Menu.Item key="topic" onClick={this.playing}>
+                        <Icon type="user" />
+                        <span>Topic</span>
                       </Menu.Item>
                       <Menu.Item key="3">
                         <Icon type="upload" />
@@ -49,14 +77,35 @@ class Dashboard extends Component {
                         type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                         onClick={this.toggle}
                         />
+                         <img src={online}/>
+                       
+
                     </Header>
                     <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-                        Content
+                   
+                    <div>
+                        <Route path = {match.url+"/wallet"} component={Wallet} />        
+                        <Route path = {match.url + "/topic"} component={Topic} />     
+                    </div>
+                      
+                    
                     </Content>
                 </Layout>
             </Layout> 
         );
     }
 }
+
+const Wallet = () =>(
+    <div className="login-panel content-backdrop ">
+    <h2>Wallet</h2>   
+    </div>
+)
+
+const Topic = () =>(
+    <div className="login-panel content-backdrop ">
+    <h2>Topic</h2>   
+    </div>
+)
  
 export default Dashboard;

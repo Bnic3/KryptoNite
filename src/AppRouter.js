@@ -39,7 +39,7 @@ const AppRouter  = () => {
        
             <Route path = "/dashboard" component={Dashboard} />        
             <Route path = "/login" component={Login} />        
-                    
+            <Route  component={Dashboard} />   
         </Switch>   
         </Router>
         
@@ -56,13 +56,5 @@ const Login = () =>(
     </div>
 )
 
-// const Dashboard = () =>(
-//     <div>
-//     <h2>About</h2>
-//     </div>
-// )
-// <Route exact path="/" render={()=>{
-//     this.walletExist() ? (<Redirect to= '/login' />) : (<Home/>)
-// }}/>
 
 export default AppRouter ;
