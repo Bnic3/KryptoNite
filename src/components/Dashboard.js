@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Layout, Input, Button, Menu, Icon } from 'antd';
 
+import {connect}  from "react-redux";
+
 import { BrowserRouter as Router, Route, Switch,Redirect} from 'react-router-dom';
 
 import {Link} from 'react-router-dom';
@@ -19,7 +21,7 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        this.props.history.push('/dasboard/wallet')
+        this.props.history.push(this.props.match.url+'/wallet')
     }
 
     toggle = () => {
@@ -46,6 +48,7 @@ class Dashboard extends Component {
       logout = ()=>{
         this.props.history.push('/login')         
       }
+      checkStore = () =>ReactLogger(this.props.state)
 
     render() { 
         const {match} = this.props;
@@ -73,6 +76,11 @@ class Dashboard extends Component {
                       <Menu.Item key="3" onClick={this.logout}>
                         <Icon type="logout" />
                         <span>Logout</span>
+                      </Menu.Item>
+
+                      <Menu.Item key="4" onClick={this.checkStore}>
+                        <Icon type="logout" />
+                        <span>store</span>
                       </Menu.Item>
 
                     </Menu>
@@ -115,5 +123,8 @@ const Topic = () =>(
     <h2>Topic</h2>   
     </div>
 )
- 
-export default Dashboard;
+function mapStateToProps(state){
+    return {state}
+} 
+
+export default connect(mapStateToProps)(Dashboard);

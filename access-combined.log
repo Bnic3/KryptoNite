@@ -32,3 +32,77 @@
 2018-08-08T14:01:32+01:00 [Kryptonite!] info: react-log:{}
 
 
+2018-08-12T17:58:03+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T17:58:03+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T17:58:03+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:06:30+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:06:31+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:06:31+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:06:31+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:06:31+01:00 [Kryptonite!] info: react-log:{"btc[object Object]":"0.00","eth[object Object]":"0.00","xmr[object Object]":"0.00"}
+2018-08-12T18:06:31+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:06:31+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:10:39+01:00 [Kryptonite!] info: react-log:click wanna play again
+2018-08-12T18:10:39+01:00 [Kryptonite!] info: react-log:wallet
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:{"btc[object Object]":"0.00","eth[object Object]":"0.00","xmr[object Object]":"0.00"}
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:26:21+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:{"btc[object Object]":"0.00","eth[object Object]":"0.00","xmr[object Object]":"0.00"}
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:32:39+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:32:47+01:00 [Kryptonite!] info: react-log:click wanna play again
+2018-08-12T18:32:47+01:00 [Kryptonite!] info: react-log:topic
+2018-08-12T18:32:48+01:00 [Kryptonite!] info: react-log:click wanna play again
+2018-08-12T18:32:48+01:00 [Kryptonite!] info: react-log:wallet
+2018-08-12T18:32:52+01:00 [Kryptonite!] info: react-log:click wanna play again
+2018-08-12T18:32:52+01:00 [Kryptonite!] info: react-log:wallet
+2018-08-12T18:32:53+01:00 [Kryptonite!] info: react-log:click wanna play again
+2018-08-12T18:32:53+01:00 [Kryptonite!] info: react-log:topic
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:btc[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:xmr[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:eth[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:btc[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:xmr[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:eth[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:btc[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:xmr[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:eth[object Object]
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:{}
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:36:26+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:38:33+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:38:34+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:38:34+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:38:34+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:38:34+01:00 [Kryptonite!] info: react-log:{"btcundefined":"0.00","ethundefined":"0.00","xmrundefined":"0.00"}
+2018-08-12T18:38:34+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:38:34+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:{"btc0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","btc0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","btc0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00","eth0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","eth0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","eth0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00","xmr0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","xmr0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","xmr0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00"}
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:40:06+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:46:21+01:00 [Kryptonite!] info: react-log:{"accounts":[],"balances":{},"enckeys":{},"metadata":{"createDate":"","ver":"0"},"tokens":[{"name":"BTC"},{"name":"XMR"},{"name":"ETH"}]}
+2018-08-12T18:46:54+01:00 [Kryptonite!] info: react-log:{"accounts":[],"balances":{},"enckeys":{},"metadata":{"createDate":"","ver":"0"},"tokens":[{"name":"BTC"},{"name":"XMR"},{"name":"ETH"}]}
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:i am in createWallest
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:From addresses
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"]
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:{"btc0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","btc0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","btc0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00","eth0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","eth0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","eth0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00","xmr0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","xmr0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","xmr0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00"}
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:From EncKeys
+2018-08-12T18:47:41+01:00 [Kryptonite!] info: react-log:{"0x297FB66931ABE8E4269Fd5452CE784165D981E4B":{"index":1,"privateKey":"1bc708ab0ef47ff8eb201f6fb89d9bab5d2543be6e59f829821adf67f03238e7","publicKey":"07fbce0fd619a7118aa0237235bb4f5f94840a7506879d89382a8850cb021aa17a2f7cfa79a6f5bac73a8f9973b687bd431923834bfa94e289d09eb22b35daea"},"0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":{"index":0,"privateKey":"fe0c9b65b87d0ccda009a9000047ed4a09b5534f11cf51bdf5cc8ca61decc5c6","publicKey":"8aec9442f7cee58ce381970c0fab78ae8b405bad052a0c925211fcc60570d50bb04c4dda05915933852904fcca5b73ba0fd9b4988b77ffe968154a153b4188d1"},"0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":{"index":2,"privateKey":"60bb10f56db986c8620bc3b72abbec93eb69716a6334e4835d6df9bb4d0011fb","publicKey":"6e25e3d78a50824501976a6bf7e533f2493eb004afc19b193cb90475727660bf9189e4dc7a7e5a645c19930a85dc08dbe94b4e1e19453940fee778823e735251"}}
+2018-08-12T18:47:45+01:00 [Kryptonite!] info: react-log:{"accounts":["0x53ABb2a7900368fFDb51bc8631078E95D1659c4E","0x297FB66931ABE8E4269Fd5452CE784165D981E4B","0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB"],"balances":{"btc0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","btc0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","btc0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00","eth0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","eth0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","eth0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00","xmr0x297FB66931ABE8E4269Fd5452CE784165D981E4B":"0.00","xmr0x53ABb2a7900368fFDb51bc8631078E95D1659c4E":"0.00","xmr0xA8E501C9A0fE2b9cf45BAfcce03e847ed17D4DFB":"0.00"},"metadata":{"createDate":"","ver":"0"},"tokens":[{"name":"BTC"},{"name":"XMR"},{"name":"ETH"}]}

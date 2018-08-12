@@ -82,6 +82,6 @@ function mapStateToProps(state){
 Home.propTypes= {
     createWallet:PropTypes.func.isRequired
 }
-export default connect(undefined,{createWallet})(Home);
+export default connect(mapStateToProps,{createWallet})(Home);
 
 

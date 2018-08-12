@@ -39,7 +39,7 @@ const AppRouter  = () => {
        
             <Route path = "/dashboard" component={Dashboard} />        
             <Route path = "/login" component={Login} />        
-            <Route  component={Dashboard} />   
+            <Route  component={Login}/>
         </Switch>   
         </Router>
         
@@ -48,12 +48,13 @@ const AppRouter  = () => {
     ) 
 }
 
-
+// <Route  component={Dashboard} /> 
 
 const Login = ({history}) =>(
     <div className="login-panel content-backdrop ">
     <h2>Login</h2>
-    <Link to='/dashboard'  />   
+    <Link to='/dashboard'> Dashboard</Link>
+    <Link to='/'> Home</Link>
     </div>
 )
 

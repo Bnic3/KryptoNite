@@ -1,7 +1,7 @@
 
-import { UPDATE_ACCOUNTS } from './../actions/types';
+import { UPDATE_ACCOUNTS, UPDATE_BALANCES, UPDATE_ENCKEYS } from './../actions/types';
 const initialState={
-metadata:{ver:"",createDate:""},
+metadata:{ver:"0",createDate:""},
 accounts:[],
 enckeys:{},
 balances:{},
@@ -15,10 +15,17 @@ export default (state=initialState,action={})=>{
     switch(action.type){
         case UPDATE_ACCOUNTS:
             const accounts= action.accounts 
-            return{
-                ...state,
-               accounts
-            }  
+            return {...state, accounts}
+            
+        case UPDATE_BALANCES:
+            const balances = action.balances
+            return {...state,balances}
+        
+        case UPDATE_ENCKEYS:
+            const {enckeys} = action
+            return {...state,enckeys}
+
+        
         default: return state;
     }
 
