@@ -6,7 +6,8 @@ accounts:[],
 enckeys:{},
 balances:{},
 tokens:[{"name":"BTC"},
-        {"name":"XMR"}]
+        {"name":"XMR"},
+        {"name":"ETH"}]
 
 } 
 

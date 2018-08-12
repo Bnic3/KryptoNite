@@ -41,7 +41,7 @@ class Home extends Component {
     processWallet= async ()=>{
         //Todo: write complex validation code here
         if (this.state.password !== ""){
-              const mnemonic = await this.props.createWallet(this.state.password);              
+              const mnemonic = await this.props.createWallet(this.state.password, this.props.tokens);              
               this.setState({mnemonic})
             }
     }  
@@ -73,6 +73,10 @@ class Home extends Component {
             </div>
         ); // end-render 
     }
+}
+
+function mapStateToProps(state){
+    return {tokens: state.tokens }
 }
  
 Home.propTypes= {

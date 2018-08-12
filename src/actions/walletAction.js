@@ -4,18 +4,18 @@ import { PASSWORDKEY } from './constants';
 
 //import {generateMnemonic} from './utils/ethFunctions'
 import { generateMnemonic, generateSeed, generateHDKeyFromSeed, genKeys } from './../utils/ethFunctions';
-import { UPDATE_ACCOUNTS } from './types';
+import { UPDATE_ACCOUNTS, UPDATE_BALANCES } from './types';
 
 //Todo1[Done]: after creation of wallet account store should be updated 
-//Todo2: balance store should be updated with appropriate token prefix
+//Todo2[Done]: balance store should be updated with appropriate token prefix
 //Todo3: enckeys store should be updated 
 //todo4: wallet metadata should be updated
-export  function createWallet(password){
+export  function createWallet(password, storeTokens){
     return async (dispatch)=>{
         ReactLogger("i am in createWallest")
         const {accounts, mnemonic} = await createCoinbaseAccounts()
-        const addresses = accounts.map(x=>x.address) 
-        dispatch(updateAccounts(addresses)); //dispatch to reducer to update account store            
+        await populateAccStore(dispatch, accounts) //dispatch to reducer to update account store           
+        await populateBalStore(dispatch,accounts,storeTokens) //update bal store
         savepass(password)        
         return mnemonic;
     }
@@ -26,11 +26,12 @@ function updateAccounts(accounts=[]){
     return {type: UPDATE_ACCOUNTS,accounts}
 }
 
+function updateAccBals(balances={}){
+    return {type: UPDATE_BALANCES,balances}
+}
 
-function savepass(pwd){   
-    const hash = crypto.createHash('sha256').update(pwd).digest('base64');
-    localStorage.setItem(PASSWORDKEY,hash)
- } 
+
+
 
 function createCoinbaseAccounts(){
     return new Promise((resolve,reject)=>{
@@ -41,4 +42,32 @@ function createCoinbaseAccounts(){
         resolve({accounts, mnemonic})
     })
 }
+
+function populateAccStore(dispatch, accounts){
+    return new Promise((resolve, reject)=>{
+        const addresses = accounts.map(x=>x.address) 
+        ReactLogger(addresses)
+        dispatch(updateAccounts(addresses));
+        resolve()
+    }) 
+} 
+
+function populateBalStore(dispatch, accounts, tokens ){
+    return new Promise((resolve,reject)=>{
+        const bal = {}
+        
+        accounts.forEach(acc=>{
+             tokens.map(x=>x.name.toLowerCase()+acc)
+            .forEach(item=>bal[item]="0.00")           
+        }) 
+        ReactLogger(bal)
+        dispatch(updateAccBals(bal))                 
+        resolve()
+    })
+} 
+
+function savepass(pwd){   
+    const hash = crypto.createHash('sha256').update(pwd).digest('base64');
+    localStorage.setItem(PASSWORDKEY,hash)
+ } 
 
