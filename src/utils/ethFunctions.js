@@ -15,7 +15,7 @@ export function generateMnemonic(){
      * @returns (Buffer(Seed)
      */
 export function generateSeed(mnemonic){
-return bip39.mnemonicToSeed
+return bip39.mnemonicToSeed(mnemonic)
 }
 
 /**

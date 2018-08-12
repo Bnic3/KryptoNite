@@ -23,16 +23,15 @@ class Home extends Component {
         this.setState({loading:true, disable:true})
         this.processWallet();
        setTimeout(()=>{
-        this.setState({ showModal: true });
-        this.props.history.push('/dashboard')
+        this.setState({ showModal: true });        
        }, 1500)
         //Todo: save create Wallet show mnemonic and navigate to dashboard 
     }
 
     handleOK = (e) => {        
         this.setState({ showModal: false });
-        
-        ReactLogger(this.props.createWallet)
+        this.props.history.push('/dashboard')
+        //ReactLogger(this.props.createWallet)
       }
     inputOnChange=(e)=>{
     this.setState({password:e.target.value})

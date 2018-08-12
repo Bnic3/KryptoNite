@@ -12,8 +12,9 @@ import { UPDATE_ACCOUNTS, UPDATE_BALANCES, UPDATE_ENCKEYS } from './types';
 //todo4: wallet metadata should be updated
 export  function createWallet(password, storeTokens){
     return async (dispatch)=>{
-        ReactLogger("i am in createWallest")
+        ReactLogger("i am in createWallet")
         const {accounts, mnemonic} = await createCoinbaseAccounts()
+        ReactLogger(accounts)
         await populateAccStore(dispatch, accounts) //dispatch to reducer to update account store           
         await populateBalStore(dispatch,accounts,storeTokens) //update bal store
         await populateEncKeys(dispatch,accounts) //update enc
@@ -42,6 +43,7 @@ function createCoinbaseAccounts(){
         const mnemonic = generateMnemonic()
         const masterseed =generateSeed(mnemonic)
         const rootBuffer =  generateHDKeyFromSeed(masterseed)
+        
         const accounts = [0,1,2].map(x=>genKeys(rootBuffer,x))
         resolve({accounts, mnemonic})
     })
@@ -79,7 +81,7 @@ function populateEncKeys(dispatch,accounts){
             const {address,privateKey,publicKey,index} = item
             encKeys[address]= {privateKey,publicKey,index} 
         })
-        ReactLogger("From EncKeys")
+        ReactLogger("From EncKeys again")
         ReactLogger(encKeys)
         dispatch(updateEncKeys(encKeys))
         resolve()
