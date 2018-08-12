@@ -39,7 +39,8 @@ export function genKeys(rootxf,index){
     const addr = ethUtil.publicToAddress(pubKey).toString('hex');
     const address = ethUtil.toChecksumAddress(addr);
 
-    return { privateKey: addrNode._privateKey.toString('hex'), address, index  }
+    return { privateKey: addrNode._privateKey.toString('hex'),
+                publicKey:pubKey.toString('hex'), address, index  }
 }
 
 

@@ -18,6 +18,10 @@ class Dashboard extends Component {
         this.state = { collapsed:false, current:null }
     }
 
+    componentDidMount() {
+        this.props.history.push('/dasboard/wallet')
+    }
+
     toggle = () => {
         this.setState({
           collapsed: !this.state.collapsed,
@@ -30,13 +34,17 @@ class Dashboard extends Component {
           current: e.key,
         });
       }
-      playing =(e)=>{
+    dashNav =(e)=>{
           ReactLogger("click wanna play again")
           ReactLogger(e.key)
           const url = this.props.match.url;
 
           this.props.history.push(`${url}/${e.key}`)
           
+      }
+
+      logout = ()=>{
+        this.props.history.push('/login')         
       }
 
     render() { 
@@ -54,17 +62,17 @@ class Dashboard extends Component {
                     </div>
 
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} >
-                      <Menu.Item key="wallet" onClick={this.playing} >
+                      <Menu.Item key="wallet" onClick={this.dashNav} >
                         <Icon type="pie-chart" />
                         <span>Wallets</span>
                       </Menu.Item>
-                      <Menu.Item key="topic" onClick={this.playing}>
+                      <Menu.Item key="topic" onClick={this.dashNav}>
                         <Icon type="user" />
                         <span>Topic</span>
                       </Menu.Item>
-                      <Menu.Item key="3">
-                        <Icon type="upload" />
-                        <span>nav 3</span>
+                      <Menu.Item key="3" onClick={this.logout}>
+                        <Icon type="logout" />
+                        <span>Logout</span>
                       </Menu.Item>
 
                     </Menu>

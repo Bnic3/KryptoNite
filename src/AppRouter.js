@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch,Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch,Redirect,Link} from 'react-router-dom';
 import ReactLogger from './utils/ReactLogger'
 
 
@@ -50,9 +50,10 @@ const AppRouter  = () => {
 
 
 
-const Login = () =>(
+const Login = ({history}) =>(
     <div className="login-panel content-backdrop ">
-    <h2>Login</h2>   
+    <h2>Login</h2>
+    <Link to='/dashboard'  />   
     </div>
 )
 

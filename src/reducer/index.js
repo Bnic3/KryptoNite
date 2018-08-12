@@ -5,7 +5,8 @@ metadata:{ver:"",createDate:""},
 accounts:[],
 enckeys:{},
 balances:{},
-tokens:[],
+tokens:[{"name":"BTC"},
+        {"name":"XMR"}]
 
 } 
 
