@@ -5,9 +5,9 @@ metadata:{ver:"0",createDate:""},
 accounts:[],
 enckeys:{},
 balances:{},
-tokens:[{"name":"BTC"},
-        {"name":"XMR"},
-        {"name":"ETH"}]
+tokens:["BTC",
+        "XMR",
+        "ETH"]
 
 } 
 
@@ -22,8 +22,8 @@ export default (state=initialState,action={})=>{
             return {...state,balances}
         
         case UPDATE_ENCKEYS:
-            const {enckeys} = action
-            return {...state,enckeys}
+            const {encKeys} = action
+            return {...state,encKeys}
 
         
         default: return state;

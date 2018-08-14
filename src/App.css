@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed')
+
+
+
 .App {
   text-align: center;
 }
@@ -90,5 +94,38 @@
     display: flex;
     
   }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 230px;
+    height: 150px;
+    
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 16px 16px;
+}
+
+.wallet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80vw;
+  height: 70vh;
+    
+}
+.wallet_topdiv {
+  display: flex;
+  flex-direction: column
+} 
+.cash{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 20px;
+}
 
  

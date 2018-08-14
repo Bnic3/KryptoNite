@@ -12,9 +12,9 @@ import { UPDATE_ACCOUNTS, UPDATE_BALANCES, UPDATE_ENCKEYS } from './types';
 //todo4: wallet metadata should be updated
 export  function createWallet(password, storeTokens){
     return async (dispatch)=>{
-        ReactLogger("i am in createWallet")
+        //ReactLogger("i am in createWallet")
         const {accounts, mnemonic} = await createCoinbaseAccounts()
-        ReactLogger(accounts)
+        //ReactLogger(accounts)
         await populateAccStore(dispatch, accounts) //dispatch to reducer to update account store           
         await populateBalStore(dispatch,accounts,storeTokens) //update bal store
         await populateEncKeys(dispatch,accounts) //update enc
@@ -24,21 +24,21 @@ export  function createWallet(password, storeTokens){
 } 
 
 
-function updateAccounts(accounts=[]){
+export function updateAccounts(accounts=[]){
     return {type: UPDATE_ACCOUNTS,accounts}
 }
 
-function updateAccBals(balances={}){
+export function updateAccBals(balances=[]){
     return {type: UPDATE_BALANCES,balances}
 }
 
-function updateEncKeys(encKeys={}){
+export function updateEncKeys(encKeys={}){
     return {type: UPDATE_ENCKEYS,encKeys}
 }
 
 
 
-function createCoinbaseAccounts(){
+export function createCoinbaseAccounts(){
     return new Promise((resolve,reject)=>{
         const mnemonic = generateMnemonic()
         const masterseed =generateSeed(mnemonic)
@@ -49,42 +49,45 @@ function createCoinbaseAccounts(){
     })
 }
 
-function populateAccStore(dispatch, accounts){
+export function populateAccStore(dispatch, accounts){
     return new Promise((resolve, reject)=>{
         const addresses = accounts.map(x=>x.address)
-        ReactLogger("From addresses") 
-        ReactLogger(addresses)
+        //ReactLogger("From addresses") 
+        //ReactLogger(addresses)
         dispatch(updateAccounts(addresses));
-        resolve()
+        resolve(addresses)
     }) 
 } 
 
-function populateBalStore(dispatch, accounts, tokens ){
+export function populateBalStore(dispatch, accounts, tokens ){
     return new Promise((resolve,reject)=>{
-        const bal = {}
         
-        accounts.forEach(acc=>{
-             tokens.map(x=>x.name.toLowerCase()+ acc.address)
-            .forEach(item=>bal[item]="0.00")           
-        }) 
+        
+    const bal= accounts.map(x=> {
+                const obj ={}
+                 obj.acc=x.address
+                 obj['USD']= "0.00"
+                tokens.forEach(token=>obj[token]="0.00")
+                return obj
+           })
         ReactLogger("From Balances")
         ReactLogger(bal)
         dispatch(updateAccBals(bal))                 
-        resolve()
+        resolve(bal)
     })
 } 
 
-function populateEncKeys(dispatch,accounts){
+export function populateEncKeys(dispatch,accounts){
     return new Promise((resolve,reject)=>{
         const encKeys = {}
         accounts.forEach(item=>{
             const {address,privateKey,publicKey,index} = item
             encKeys[address]= {privateKey,publicKey,index} 
         })
-        ReactLogger("From EncKeys again")
-        ReactLogger(encKeys)
+        //ReactLogger("From EncKeys again")
+        //ReactLogger(encKeys)
         dispatch(updateEncKeys(encKeys))
-        resolve()
+        resolve(encKeys)
 
     })
 }  

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Input, Button, Menu, Icon } from 'antd';
+import { Layout, Input, Button, Menu, Icon, Col, Row } from 'antd';
 
 import {connect}  from "react-redux";
 
@@ -11,6 +11,7 @@ import Home from './Home';
 import logo from "../img/coin.png"
 import online from "../img/online.png"
 import ReactLogger from '../utils/ReactLogger';
+import Wallet from './Wallet';
 
 const { Header, Sider, Content } = Layout;
 
@@ -73,6 +74,10 @@ class Dashboard extends Component {
                         <Icon type="user" />
                         <span>Topic</span>
                       </Menu.Item>
+                      <Menu.Item key="transfer" onClick={this.dashNav}>
+                        <Icon type="swap" />
+                        <span>Transfer</span>
+                      </Menu.Item>
                       <Menu.Item key="3" onClick={this.logout}>
                         <Icon type="logout" />
                         <span>Logout</span>
@@ -101,7 +106,8 @@ class Dashboard extends Component {
                    
                     <div>
                         <Route path = {match.url+"/wallet"} component={Wallet} />        
-                        <Route path = {match.url + "/topic"} component={Topic} />     
+                        <Route path = {match.url + "/topic"} component={Topic} />
+                        <Route path = {match.url + "/transfer"} component={Transfer} />     
                     </div>
                       
                     
@@ -112,15 +118,19 @@ class Dashboard extends Component {
     }
 }
 
-const Wallet = () =>(
-    <div className="login-panel content-backdrop ">
-    <h2>Wallet</h2>   
-    </div>
-)
+    
+
+
 
 const Topic = () =>(
     <div className="login-panel content-backdrop ">
     <h2>Topic</h2>   
+    </div>
+)
+
+const Transfer = () =>(
+    <div className="login-panel content-backdrop ">
+    <h2>Transfer</h2>   
     </div>
 )
 function mapStateToProps(state){
