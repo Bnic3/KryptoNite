@@ -12,6 +12,9 @@ import logo from "../img/coin.png"
 import online from "../img/online.png"
 import ReactLogger from '../utils/ReactLogger';
 import Wallet from './Wallet';
+import { KS } from '../actions/constants';
+import Transfer from './Transfer';
+import { loadStore } from './../actions/dashboardActions';
 
 const { Header, Sider, Content } = Layout;
 
@@ -37,11 +40,28 @@ class Dashboard extends Component {
           current: e.key,
         });
       }
-    dashNav =(e)=>{
-          ReactLogger("click wanna play again")
-          ReactLogger(e.key)
-          const url = this.props.match.url;
 
+      restore = (e)=>{
+            const {key} = e;
+            const {state={}} = this.props
+            if (key == "save"){
+                //Todo: save redux store to db 
+               localStorage.setItem(KS,JSON.stringify(state))
+               ReactLogger("store is saved on db")
+
+            }else if(key=="clear"){
+                localStorage.clear()
+            } 
+            else{
+                //Todo:retrieve store from db
+                const store = JSON.parse(localStorage.getItem(KS))
+                this.props.loadStore(store);
+
+            }
+      }
+
+    dashNav =(e)=>{          
+          const url = this.props.match.url;
           this.props.history.push(`${url}/${e.key}`)
           
       }
@@ -88,6 +108,21 @@ class Dashboard extends Component {
                         <span>store</span>
                       </Menu.Item>
 
+                      <Menu.Item key="restore" onClick={this.restore}>
+                        <Icon type="hdd" />
+                        <span>Restore</span>
+                      </Menu.Item>
+
+                      <Menu.Item key="save" onClick={this.restore} >
+                        <Icon type="hdd" />
+                        <span>Save</span>
+                      </Menu.Item>
+
+                      <Menu.Item key="clear" onClick={this.restore} >
+                        <Icon type="hdd" />
+                        <span>Clear</span>
+                      </Menu.Item>
+
                     </Menu>
                 </Sider>
 
@@ -128,7 +163,7 @@ const Topic = () =>(
     </div>
 )
 
-const Transfer = () =>(
+const Transfer2 = () =>(
     <div className="login-panel content-backdrop ">
     <h2>Transfer</h2>   
     </div>
@@ -137,4 +172,4 @@ function mapStateToProps(state){
     return {state}
 } 
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps,{loadStore})(Dashboard);
