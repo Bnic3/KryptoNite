@@ -34,7 +34,7 @@ const AppRouter  = () => {
         <Switch> 
                   
          <Route exact path = "/" render={(props)=>{
-            return  walletExist() ? (<Redirect to= '/login' />) : (<Home {...props}/>)
+            return  false ? (<Redirect to= '/login' />) : (<Home {...props}/>)
          }} />
        
             <Route path = "/dashboard" component={Dashboard} />        

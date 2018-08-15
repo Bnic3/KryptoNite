@@ -23,6 +23,12 @@ class Dashboard extends Component {
         super(props);
         this.state = { collapsed:false, current:null }
     }
+    componentWillMount(){
+        //localStorage.clear()
+        const store = JSON.parse(localStorage.getItem(KS))
+        this.props.loadStore(store);
+       
+    }
 
     componentDidMount() {
         this.props.history.push(this.props.match.url+'/wallet')

@@ -3,11 +3,11 @@ import { UPDATE_ACCOUNTS, UPDATE_BALANCES, UPDATE_ENCKEYS, LOADSTORE } from './.
 const initialState={
 metadata:{ver:"0",createDate:""},
 accounts:[],
-enckeys:{},
+encKeys:{},
 balances:{},
-tokens:["BTC",
-        "XMR",
-        "ETH"]
+tokens:[{name:"TRX",usdx:"0.0202",contract:"",desc:""},
+        {name:"BNB",usdx:"9.9959",contract:"", desc:""},
+        {name:"OMG",usdx:"3.8656",contract:"", desc:""}]
 
 } 
 

@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 class Transfer extends Component {
     constructor(props) {
         super(props);
+        const {accounts,balances,encKeys,tokens} = this.props.state
         this.state = { }
     }
 
@@ -17,8 +18,15 @@ class Transfer extends Component {
         }
 
     render() { 
+        const {accounts,balances,encKeys,tokens} = this.props.state
         const InputGroup = Input.Group;
         const Option = Select.Option;
+
+        const tokenOption = tokens.map(x=><Option value={x}>{x}</Option>)
+        const accOptions = accounts.map((x,index)=><Option value={x}>{`Acc ${index}`}</Option>)
+
+
+
         return (
             <Row type='flex'>
                 <Col span={12} className='transfer_canvas '>
@@ -28,9 +36,8 @@ class Transfer extends Component {
                         <InputGroup compact>
                         <Button type='primary ' style={{ width: '30%' }}> Select Account</Button>
                        
-                            <Select defaultValue="Acc0" onChange={this.handleChange}>
-                                <Option value="Acc1">Acc0</Option>
-                                <Option value="Acc2">Acc1</Option>
+                            <Select defaultValue={accounts[0]} onChange={this.handleChange}>
+                                {accOptions}
                             </Select>
                             
                         </InputGroup>
@@ -40,9 +47,7 @@ class Transfer extends Component {
                         <InputGroup compact>
                         <Button type='primary ' style={{ width: '30%' }}> Select Crypto</Button>
                             <Select defaultValue="ETH" onChange={this.handleChange} >
-                                <Option value="ETH">ETH</Option>
-                                <Option value="BTC">BTC</Option>
-                                <Option value="XMR">XMR</Option>
+                                {tokenOption}                                
                             </Select>
                             
                         </InputGroup>
@@ -69,5 +74,9 @@ class Transfer extends Component {
         );
     }
 }
+
+function mapStateToProps(state){
+    return {state}
+}
  
-export default connect()(Transfer);
+export default connect(mapStateToProps)(Transfer);

@@ -67,7 +67,7 @@ export function populateBalStore(dispatch, accounts, tokens ){
                 const obj ={}
                  obj.acc=x.address
                  obj['USD']= "0.00"
-                tokens.forEach(token=>obj[token]="0.00")
+                tokens.forEach(token=>obj[token.name]="0.00")
                 return obj
            })
         ReactLogger("From Balances")
