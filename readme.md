@@ -1,5 +1,6 @@
 ## Info
-A pet project to explore the world of Blockchain
+A pet project to explore the world of Blockchain. 
+KryptoNite was built with Electron, React and Redux.
 
 ![kryptonite1](https://user-images.githubusercontent.com/8504235/44228568-82b28b80-a18d-11e8-897e-900b97186a2e.PNG)
 
