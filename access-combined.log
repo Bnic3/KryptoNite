@@ -278,3 +278,9 @@
 2018-08-15T20:08:08+01:00 [Kryptonite!] info: react-log:0xd0b505e6f3646A9908159106CeCf988916AA3fb4
 2018-08-15T20:08:10+01:00 [Kryptonite!] info: react-log:i am checking handlechange
 2018-08-15T20:08:10+01:00 [Kryptonite!] info: react-log:0xa99fed65892F184dF684BE0c11688CB973290405
+2018-08-16T18:24:45+01:00 [Kryptonite!] info: Added Extension:  React Developer Tools
+2018-08-16T18:26:53+01:00 [Kryptonite!] info: Added Extension:  React Developer Tools
+2018-08-16T18:27:20+01:00 [Kryptonite!] info: react-log:From Balances
+2018-08-16T18:27:20+01:00 [Kryptonite!] info: react-log:[{"BNB":"0.00","OMG":"0.00","TRX":"0.00","USD":"0.00","acc":"0x48D99d3276c155872C89F169C52f6f0569B80867"},{"BNB":"0.00","OMG":"0.00","TRX":"0.00","USD":"0.00","acc":"0xbCA6476202cED290089C48DbC0bbA74BBb7c7d4a"},{"BNB":"0.00","OMG":"0.00","TRX":"0.00","USD":"0.00","acc":"0x2802E9d44585f739Af6b2663bC5e66E8fbc41aF2"}]
+2018-08-16T18:27:34+01:00 [Kryptonite!] info: react-log:store is saved on db
+2018-08-16T18:32:14+01:00 [Kryptonite!] info: react-log:Done sending

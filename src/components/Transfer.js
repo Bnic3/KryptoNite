@@ -3,22 +3,50 @@ import React, { Component } from 'react';
 import {Row,Col, Input, Select,Button, Icon} from 'antd'
 import ReactLogger from '../utils/ReactLogger';
 import { connect } from 'react-redux';
+import EthereumConnector from './../utils/EthereumConnector';
 
 
 class Transfer extends Component {
     constructor(props) {
         super(props);
         const {accounts,balances,encKeys,tokens} = this.props.state
-        this.state = { }
+        this.state = {coinbase:"",
+                        coinbal:"",
+                        acc:"",accbal:"" }
+
+        this.Connector = new EthereumConnector()
+        this.Connector.connect("http://127.0.0.1:9545/")
+        
     }
+    
 
     handleChange = (e)=>{
         ReactLogger("i am checking handlechange") 
         ReactLogger(e)
         }
 
+    getBal=async ()=>{
+         const coinbal =  await this.Connector.getBalance(this.state.coinbase) 
+         const accbal = await this.Connector.getBalance(this.state.acc)
+         this.setState({coinbal,accbal})
+    }
+
+    sendEth= async ()=>{
+        await this.Connector.sendTran(this.state.coinbase,this.state.acc)
+        ReactLogger("Done sending")
+
+    }
+    getCoinbase = async ()=>{
+        const coinbase = await this.Connector.getCoinbase()
+        const acc= this.props.state.accounts[0]
+        this.setState({coinbase,acc})
+    }
+    
+    
+
     render() { 
         const {accounts,balances,encKeys,tokens} = this.props.state
+        const {coinbal,coinbase,acc,accbal} = this.state;
         const InputGroup = Input.Group;
         const Option = Select.Option;
 
@@ -57,6 +85,11 @@ class Transfer extends Component {
                         <p>0.00 ETH</p>
                         <p>0.00 USD</p>
 
+                        <p>Coinbase:  {coinbase}</p>
+                        <p>Coinbase bal:  {coinbal}</p>
+                        <p>My Acc:  {acc}</p>
+                        <p>My Acc Bal: {accbal}</p>
+
                         <h3>To:</h3>
                         <div>
                         <Input placeholder="Amount to send" addonAfter={<Icon type="setting" />} />
@@ -64,7 +97,9 @@ class Transfer extends Component {
                         </div>
                         <br/>
 
-                        <Button type='primary ' > Send</Button>
+                        <Button type='primary ' onClick={this.getBal} >Bal</Button>
+                        <Button type='primary ' onClick={this.sendEth}  > Send</Button>
+                        <Button type='primary ' onClick={this.getCoinbase}  > Coinbase</Button>
                         
                     </div>
                </Col>
