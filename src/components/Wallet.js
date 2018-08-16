@@ -24,16 +24,16 @@ class Wallet extends Component {
                     </div>
                     <div className="card ">
                     <div className="container">
-                        <h3><b>John Doe</b></h3> 
-                        <h1>$5.00</h1>  
-                        <p></p>
+                        <h3><b>Account 2</b></h3> 
+                        <p className="cash">$1,485,000.00</p> 
+                            <h4>0x6Ccab98e98D7c69499890...</h4>
                     </div>
                 </div>
                 <div className="card ">
                         <div className="container">
-                            <h3><b>John Doe</b></h3> 
-                            <h1>$50,000.00</h1>  
-                            <p></p>
+                            <h3><b>Account 3</b></h3> 
+                            <p className="cash">$34.00</p> 
+                            <h4>0x6Ccab98e98D7c69499890...</h4>
                         </div>
                     </div>
 

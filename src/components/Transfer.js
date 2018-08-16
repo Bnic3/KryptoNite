@@ -5,6 +5,8 @@ import ReactLogger from '../utils/ReactLogger';
 import { connect } from 'react-redux';
 import EthereumConnector from './../utils/EthereumConnector';
 
+import eth from "../img/eth-icon.jpg"
+
 
 class Transfer extends Component {
     constructor(props) {
@@ -85,12 +87,16 @@ class Transfer extends Component {
                         <p>0.00 ETH</p>
                         <p>0.00 USD</p>
 
+                        <h3>To:</h3>                        
+                        <Input placeholder="Recipients Address" addonAfter={<Icon type="setting" />} />                       
+                        <br/>
+
                         <p>Coinbase:  {coinbase}</p>
                         <p>Coinbase bal:  {coinbal}</p>
                         <p>My Acc:  {acc}</p>
                         <p>My Acc Bal: {accbal}</p>
 
-                        <h3>To:</h3>
+                        <h3>Amount to Transact</h3>
                         <div>
                         <Input placeholder="Amount to send" addonAfter={<Icon type="setting" />} />
                         <Input placeholder="Amount to send in USD" addonAfter={<Icon type="setting" />} />
@@ -103,7 +109,7 @@ class Transfer extends Component {
                         
                     </div>
                </Col>
-                <Col span = {6} className='black'> Ethereum Icon </Col>
+                <Col span = {6} className=''> <img src={eth} /> </Col>
             
             </Row>  
         );
