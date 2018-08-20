@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed')
+/* @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed') */
 
 
 
@@ -126,6 +126,13 @@
 .cash{
   font-family: 'Encode Sans Condensed', sans-serif;
   font-size: 20px;
+}
+
+.homediv {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
 }
 
  

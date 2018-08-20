@@ -17,7 +17,7 @@ class Transfer extends Component {
                         acc:"",accbal:"" }
 
         this.Connector = new EthereumConnector()
-        this.Connector.connect("http://127.0.0.1:9545/")
+        this.Connector.connect("http://127.0.0.1:7545/")
         
     }
     

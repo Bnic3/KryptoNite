@@ -64,7 +64,7 @@ class Home extends Component {
                     onOk={this.handleOK} onCancel={this.handleOK} >
 
                     <h2>"{this.state.mnemonic}"</h2>                    
-                    <p>Ensure you write down these wordson paper without the quotes. This can be used to recover your password</p>
+                    <p>Ensure you write down these words on paper without the quotes. This can be used to recover your password</p>
                     </Modal>
                               
                 </Col>

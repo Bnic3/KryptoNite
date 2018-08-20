@@ -30,7 +30,7 @@ contract TronToken {
         _;
     }
 
-    function TronToken(address _addressFounder) public  {
+    constructor(address _addressFounder) public  {
         owner = msg.sender;
         totalSupply = valueFounder;
         balanceOf[_addressFounder] = valueFounder;

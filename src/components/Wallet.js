@@ -47,7 +47,7 @@ class Wallet extends Component {
 
 function mapStateToProps(state){
     return {
-        balances:(state.balances ) ? state.balances : [1,2,3] 
+        //balances:(state.balances ) ? state.balances : [1,2,3] 
     }
 }
 

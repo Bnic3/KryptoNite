@@ -15,6 +15,7 @@ import reducer from './reducer'
 
 
 import AppRouter from './AppRouter';
+import ReactLogger from './utils/ReactLogger';
 
 //const electron = window.require('electron');
 //const fs = electron.remote.require('fs');
@@ -26,6 +27,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, 
     composeEnhancers(applyMiddleware(thunk)))
 //ipcRenderer.send('react:log', store.getState());
+store.subscribe(()=>{
+    ReactLogger("i am in subscribe")
+    ReactLogger(store.getState())
+})
  
 
 const jsx = 

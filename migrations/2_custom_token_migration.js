@@ -13,20 +13,24 @@ var OMGToken = artifacts.require("OMGToken");
 
 var TronToken = artifacts.require("TronToken");
 
+// uint256 initialSupply,
+//         string tokenName,
+//         uint8 decimalUnits,
+//         string tokenSymbol
 
-
-module.exports = function(deployer) {
-  deployer.deploy(BNB);
-  deployer.deploy(SafeMath);
-  deployer.deploy(ERC20Basic);
-  deployer.deploy(BasicToken);
-  deployer.deploy(ERC20);
-  deployer.deploy(StandardToken);
-  deployer.deploy(Ownable);
-  deployer.deploy(Pausable);
-  deployer.deploy(PausableToken);
-  deployer.deploy(TokenTimelock);
-  deployer.deploy(OMGToken);
-  deployer.deploy(TronToken);
+module.exports = function(deployer,accounts) {
+  
+//   deployer.deploy(SafeMath);
+//   deployer.deploy(BNB(10000000,'BNB',18,'BNB'));
+//   deployer.deploy(ERC20Basic);
+//   deployer.deploy(BasicToken);
+//   deployer.deploy(ERC20);
+//   deployer.deploy(StandardToken);
+//   deployer.deploy(Ownable);
+//   deployer.deploy(Pausable);
+//   deployer.deploy(PausableToken);
+//   deployer.deploy(TokenTimelock);
+//   deployer.deploy(OMGToken);
+  deployer.deploy(TronToken(accounts[0]));
 
 };

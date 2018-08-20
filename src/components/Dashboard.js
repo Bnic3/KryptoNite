@@ -26,7 +26,8 @@ class Dashboard extends Component {
     componentWillMount(){
         //localStorage.clear()
         const store = JSON.parse(localStorage.getItem(KS))
-        this.props.loadStore(store);
+        if(store !=null){ this.props.loadStore(store);}
+       
        
     }
 

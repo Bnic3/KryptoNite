@@ -9,6 +9,7 @@ import './App.css';
 import { Row, Col, Layout, Card } from 'antd';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
+import Login from './components/Login';
 
 const {  Content } = Layout;
 
@@ -50,13 +51,13 @@ const AppRouter  = () => {
 
 // <Route  component={Dashboard} /> 
 
-const Login = ({history}) =>(
-    <div className="login-panel content-backdrop ">
-    <h2>Login</h2>
-    <Link to='/dashboard'> Dashboard</Link>
-    <Link to='/'> Home</Link>
-    </div>
-)
+// const Login = ({history}) =>(
+//     <div className="login-panel content-backdrop ">
+//     <h2>Login</h2>
+//     <Link to='/dashboard'> Dashboard</Link>
+//     <Link to='/'> Home</Link>
+//     </div>
+// )
 
 
 export default AppRouter ;

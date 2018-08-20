@@ -10,10 +10,10 @@ import { UPDATE_ACCOUNTS, UPDATE_BALANCES, UPDATE_ENCKEYS } from './types';
 //Todo2[Done]: balance store should be updated with appropriate token prefix
 //Todo3[Done]: enckeys store should be updated 
 //todo4: wallet metadata should be updated
-export  function createWallet(password, storeTokens){
+export  function createWallet(password, storeTokens, restoremnemonic=""){
     return async (dispatch)=>{
         //ReactLogger("i am in createWallet")
-        const {accounts, mnemonic} = await createCoinbaseAccounts()
+        const {accounts, mnemonic} = await createCoinbaseAccounts(restoremnemonic)
         //ReactLogger(accounts)
         await populateAccStore(dispatch, accounts) //dispatch to reducer to update account store           
         await populateBalStore(dispatch,accounts,storeTokens) //update bal store
@@ -22,6 +22,8 @@ export  function createWallet(password, storeTokens){
         return mnemonic;
     }
 } 
+
+ 
 
 
 export function updateAccounts(accounts=[]){
@@ -38,9 +40,9 @@ export function updateEncKeys(encKeys={}){
 
 
 
-export function createCoinbaseAccounts(){
+export function createCoinbaseAccounts(restoreMnemonic=""){
     return new Promise((resolve,reject)=>{
-        const mnemonic = generateMnemonic()
+        const mnemonic = (restoreMnemonic =="") ? generateMnemonic() : restoreMnemonic
         const masterseed =generateSeed(mnemonic)
         const rootBuffer =  generateHDKeyFromSeed(masterseed)
         
@@ -70,8 +72,8 @@ export function populateBalStore(dispatch, accounts, tokens ){
                 tokens.forEach(token=>obj[token.name]="0.00")
                 return obj
            })
-        ReactLogger("From Balances")
-        ReactLogger(bal)
+        //ReactLogger("From Balances")
+        //ReactLogger(bal)
         dispatch(updateAccBals(bal))                 
         resolve(bal)
     })
@@ -96,4 +98,16 @@ function savepass(pwd){
     const hash = crypto.createHash('sha256').update(pwd).digest('base64');
     localStorage.setItem(PASSWORDKEY,hash)
  } 
+
+ export function dashLogin(pwd){
+     return async (dispatch)=>{
+        let bool = false
+        const hash = crypto.createHash('sha256').update(pwd).digest('base64');
+        const password = localStorage.getItem(PASSWORDKEY)
+        if (hash == password){ bool = true}
+        return bool
+     }
+     
+ }
+
 
