@@ -1,3 +1,4 @@
+require('dotenv').config()
 const electron = require('electron')
 const app = electron.app
 const {BrowserWindow,ipcMain, Menu} = electron
@@ -30,9 +31,11 @@ function createWindow() {
    // Don't show until we are ready and loaded
    mainWindow.once('ready-to-show', () => {
     mainWindow.show()
-    // Open the DevTools automatically if developing
+   
    
   })
+
+  
     
 
   mainWindow.on('closed', () => {
@@ -40,7 +43,9 @@ function createWindow() {
   })
 
   installExtension(REACT_DEVELOPER_TOOLS).then((name) => {
+    const key = process.env.INFURA_KEY;
     logger.info(`Added Extension:  ${name}`);
+    
 })
 .catch((err) => {
    logger.info('An error occurred: ', err);
